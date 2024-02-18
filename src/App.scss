@@ -16,10 +16,11 @@ a:hover{
 
 .App{
   font-family:'Livvic', Verdana, Geneva, Tahoma, sans-serif;
-  padding: 40px;
   display: flex;
+  padding: 50px;
   flex-direction: column;
   gap: 80px;
+  scroll-behavior: smooth;
 }
   //header
   .header{
@@ -45,14 +46,40 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
+    .image{
+      width: 350px;
+      height: 350px;
+    
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 90px rgba(157, 155, 155, 0.9);
+        animation: floatimage 4s ease-in-out infinite;
+      }
+      @keyframes floatimage {
+        0%{
+          transform: translateY(0);
+        }
+        50%{
+          transform: translateY(-10px);
+        }
+        100%{
+          transform: translateY(0);
+        }
+      }
+    }
   }
 
   .home-content{
+    margin-top: -30px;
     display: flex;
     gap: 40px;
     align-items: center;
   }
   .name{
+    margin-top: -30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,41 +104,226 @@ a:hover{
     }
   }
 
-.image{
-  width: 350px;
-  height: 350px;
+button{
+  width: 150px;
+  height: 50px;
+  border: none;
+  border: 2px solid white;
+  background-color: var(--color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+button:hover{
+  border: 2px solid var(--color);
+  background-color: white;
+}
 
-  img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 90px rgba(157, 155, 155, 0.9);
-    animation: floatimage 4s ease-in-out infinite;
+
+.about{
+  margin-top: -50px;
+  padding: 80px;
+  margin-bottom: -50px;
+}
+.about-content{
+  padding: 10px;
+  h3{
+    color: var(--color);
+    border-bottom: 1px solid lightgray;
   }
-  @keyframes floatimage {
-    0%{
-      transform: translateY(0);
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+.skills-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 20px;
+  .container{
+    width: 300px;
+    border: 1px solid rgb(188, 186, 186);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    .image{
+      margin-top: 50px;
+      width: 150px;
+      height: 100px;
+      margin-left: -20px;
+
+      img{
+        width: 150px;
+        height: 100px;
+        object-fit: contain;
+        margin: 10px;
+      }
     }
-    50%{
-      transform: translateY(-10px);
+    .heading{
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: -20px;
     }
-    100%{
-      transform: translateY(0);
+    p{
+      font-size: 12px;
+      padding: 20px;
+      text-align: justify;
     }
+  }
+}
+h2{
+  color: #000;
+  span{
+    color: var(--color);
+  }
+}
+
+
+#travelix{
+  background: url('./assets//travelix.png')  no-repeat;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
+  h3{
+    display: none;
+  }
+  p{
+    display: none;
+  }
+  span{display: none;}
+}
+
+#travelix:hover {
+  background: linear-gradient(rgb(135, 204, 241), rgb(246, 248, 248)), url('./assets/travelix.png') no-repeat;
+  cursor: pointer;
+  background-size: cover;
+  color: black;
+
+  h3{
+    display: block;
+  }
+  p{
+    display: block;
+  }
+  span{
+    display: block;
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+
+#weatherly{
+  background: url('./assets//weatherly.jpg')  no-repeat;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
+  color: black;
+  h3{
+    display: none;
+  }
+  p{
+    display: none;
+  }
+  span{display: none;}
+}
+
+#weatherly:hover {
+  background: linear-gradient(rgb(135, 204, 241), rgb(246, 248, 248)), url('./assets/travelix.png') no-repeat;
+  cursor: pointer;
+  background-size: cover;
+  color: black;
+
+  h3{
+    display: block;
+  }
+  p{
+    display: block;
+  }
+  span{
+    display: block;
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+#tourworld{
+  background: url('./assets//tourworld.png')  no-repeat;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
+  color: black;
+  h3{
+    display: none;
+  }
+  p{
+    display: none;
+  }
+  span{display: none;}
+}
+
+#tourworld:hover {
+  background: linear-gradient(rgb(135, 204, 241), rgb(246, 248, 248)), url('./assets/travelix.png') no-repeat;
+  cursor: pointer;
+  background-size: cover;
+  color: black;
+
+  h3{
+    display: block;
+  }
+  p{
+    display: block;
+  }
+  span{
+    display: block;
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+.container{
+  transition: transform 0.3s ease-in-out;
+}
+.container:hover{
+  transform: scale(1.05);
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .val{
+    margin-top: -10px;
   }
 }
 
 
 
 
-
-
-
-
-
 //mobile
 @media only screen and (max-width : 1000px){
+  .App{
+    margin-left: 25px;
+    padding: 1px;
+  }
+  .home{
+    padding: 10px;
+  }
   #menu{
     display: block;
     cursor: pointer;
@@ -139,6 +351,11 @@ a:hover{
   .home{
     margin-top: -20px;
     flex-direction: column;
+    .image{
+      margin-top: 70px;
+      width: 250px;
+      height: 250px;
+    }
   }
   .home-content{
     flex-direction: column;
@@ -164,8 +381,34 @@ a:hover{
       height: 30px;
     }
   }
-  .image{
-    width: 250px;
-    height: 250px;
+  .about{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+  }
+  p{
+    text-align: justify;
+  }
+
+  .skills{
+    padding: 0px;
+
+    .grid{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .skills-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
