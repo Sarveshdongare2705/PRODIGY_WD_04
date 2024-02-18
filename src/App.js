@@ -223,7 +223,7 @@ function App() {
         </div>
         </div>
       </section>
-      <section className='skills' id='education'>
+      <section className='skills' id='contact'>
         <div className='skills-content'>
         <h2 className='heading'> Contact <span>Details</span></h2>
         <div className='detail'>

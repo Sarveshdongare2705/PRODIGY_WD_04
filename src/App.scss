@@ -77,12 +77,17 @@ a:hover{
     display: flex;
     gap: 40px;
     align-items: center;
+
   }
   .name{
     margin-top: -30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    h2{
+      color: var(--color);
+    }
   }
 
   h1{
@@ -318,8 +323,7 @@ h2{
 //mobile
 @media only screen and (max-width : 1000px){
   .App{
-    margin-left: 25px;
-    padding: 1px;
+    padding: 10px;
   }
   .home{
     padding: 10px;
@@ -341,8 +345,8 @@ h2{
     gap: 10px;
     justify-content: center;
     align-items: center;
-    top: 90px;
-    right: 20px;
+    top: 50px;
+    right: -10px;
     background-color: rgb(249, 247, 247);
     padding: 10px;
     border-radius: 20px;
